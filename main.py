@@ -1,6 +1,6 @@
 import cv2
 import imutils
-from centroidtracker import Mass_Centre
+from MassCenter import Mass_Centre
 from itertools import combinations
 import math
 import numpy as np
