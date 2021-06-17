@@ -29,7 +29,6 @@ class Mainwindow(QDialog):
             return
         else:
             path=self.lineEdit.text()
-
             main.main(path)
 
 
@@ -42,10 +41,10 @@ class Mainwindow(QDialog):
         msg.setIcon(QMessageBox.Warning)
 
         show_msg = msg.exec_()
-
-app = QApplication(sys.argv)
-mainwindow = Mainwindow()
-widget = QtWidgets.QStackedWidget()
-widget.addWidget(mainwindow)
-widget.show()
-sys.exit(app.exec_())
+if __name__=='__main__':
+    app = QApplication(sys.argv)
+    mainwindow = Mainwindow()
+    widget = QtWidgets.QStackedWidget()
+    widget.addWidget(mainwindow)
+    widget.show()
+    sys.exit(app.exec_())
