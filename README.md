@@ -12,3 +12,15 @@ To decide whether the distance between them is appropriate or not, the algorithm
 Finally, by testing the frame, if the system predicts that people will violate social distancing, a warning will be occurred by the algorithm,to avoid face to face contact with people. 
 The reason lies in the fact that many humans are careless about this pandemic by not keeping a safe distance.
 
+
+# Team Members
+•	Christine Magdy
+•	Mariam Atef
+•	Martina Fadi
+•	Mary Malak
+•	Maryham Melad
+
+
+# Demo Video
+
+
