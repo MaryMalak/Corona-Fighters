@@ -14,15 +14,16 @@ The reason lies in the fact that many humans are careless about this pandemic by
 
 
 # Team Members
-•	Christine Magdy
 
-•	Mariam Atef
+•	![Christine Magdy](https://github.com/ChristineMagdy99) (16E0129)
 
-•	Martina Fadi
+•	![Mariam Atef](https://github.com/MariamGhaly1) (1601372)
 
-•	Mary Malak
+•	![Martina Fadi](https://github.com/tinafadi99) (1601053)
 
-•	Maryham Melad
+•	![Mary Malak](https://github.com/MaryMalak)  (1601069)
+
+•	![Maryham Melad](https://github.com/maryhammelad) (1061075)
 
 
 # Demo Video
