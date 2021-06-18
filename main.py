@@ -67,8 +67,6 @@ def main(path):
 
             dict_centre[obj_identifier] = (cX, cY, x1, y1, x2, y2)
 
-            # text = "ID: {}".format(obj_identifier)
-            # cv2.putText(frame, text, (x1, y1-5), cv2.FONT_HERSHEY_COMPLEX_SMALL, 1, (0, 0, 255), 1)
 
         red_zone_list = []
         for (id1, p1), (id2, p2) in combinations(dict_centre.items(), 2):
