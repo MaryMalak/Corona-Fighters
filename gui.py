@@ -13,7 +13,7 @@ class Mainwindow(QDialog):
     def __init__(self):
         self.browseflag=0
         super(Mainwindow, self).__init__()
-        loadUi("corona fighter.ui", self)
+        loadUi("corona-fighter.ui", self)
         self.showFullScreen()
         self.setWindowState(QtCore.Qt.WindowMaximized)
         
