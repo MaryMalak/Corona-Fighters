@@ -1,4 +1,4 @@
-# import the necessary packages
+# importing the required packages
 from collections import OrderedDict
 import numpy as np
 
@@ -8,30 +8,23 @@ import _modify
 
 class Mass_Centre:
     def __init__(self, max_frames=10, limited_length=50):
-        # initialize the next unique object ID along with two ordered
-        # dictionaries used to keep track of mapping a given object
-        # ID to its centroid and number of consecutive frames it has
-        # been marked as "disappeared", respectively
-        self.following_obj_ID = 0
-        self.objs = OrderedDict()
-        self.gone = OrderedDict()
-        self.bbox = OrderedDict()  # CHANGE
+        
+        self.following_obj_ID = 0          # initialize the unique ID of the next object with zero 
+        self.objs = OrderedDict()          # initialize the dictionaries that keeps track of mapping the object ID to its centroid 
+        self.gone = OrderedDict()          #initialize the dictionaries that keeps track of mapping the object ID to the number of 
+                                           #consecutive frames it has been marked as "disappeared"
+        self.bbox = OrderedDict()  
 
-        # store the number of maximum consecutive frames a given
-        # object is allowed to be marked as "disappeared" until we
-        # need to deregister the object from tracking
-        self.max_frames = max_frames
+        self.max_frames = max_frames      #maximum number of consecutive "disappeared" frames given to object untill it is deregistered from tracking
 
-        # store the maximum distance between centroids to associate
-        # an object -- if the distance is larger than this maximum
-        # distance we'll start to mark the object as "disappeared"
-        self.limited_length = limited_length
+        self.limited_length = limited_length #specify max acceptable distance between two centroids of an object above which object will be marked as disappeared
+                                             #and will be removed consequently
 
-    def add_obj(self, centroid, inputRect):
+    def add_obj(self, centroid, inputRect):     #adding an object to be tracked and drawing corresponding tracking rectangle
         return _add_obj.add_obj(self, centroid, inputRect)
 
-    def remove_obj(self, obj_identifier):
+    def remove_obj(self, obj_identifier):        #detracking the object through its ID 
         return _remove_obj.remove_obj(self, obj_identifier)
 
-    def modify(self, drawn_rectangles):
+    def modify(self, drawn_rectangles):         #modifying the rectangle drawn around each tracked object
         return _modify.modify(self, drawn_rectangles)
