@@ -1,3 +1,4 @@
+# import needed packages
 import cv2
 import imutils
 from MassCenter import Mass_Centre
@@ -21,23 +22,25 @@ CLASSES = ["background", "aeroplane", "bicycle", "bird", "boat",
 tracker = Mass_Centre(max_frames=10, limited_length=50)
 def main(path):
     cap = cv2.VideoCapture(path)
-
+    # To handle times and dates
     fps_start_time = datetime.datetime.now()
     fps = 0
     total_frames = 0
 
     while True:
         ret, frame = cap.read()
+        # put old data ina array with new size
         frame = imutils.resize(frame, width=800)
         total_frames = total_frames + 1
 
         (H, W) = frame.shape[:2]
-
+        # To scale and subtract mean
         blob = cv2.dnn.blobFromImage(frame, 0.007843, (W, H), 127.5)
 
         detector.setInput(blob)
         person_detections = detector.forward()
         drawn_rectangles = []
+           
         for i in np.arange(0, person_detections.shape[2]):
             confidence = person_detections[0, 0, i, 2]
             if confidence > 0.5:
@@ -49,7 +52,7 @@ def main(path):
                 person_box = person_detections[0, 0, i, 3:7] * np.array([W, H, W, H])
                 (startX, startY, endX, endY) = person_box.astype("int")
                 drawn_rectangles.append(person_box)
-
+        # Recall non max suppression function for isolating stronger edges and thinning
         boundingboxes = np.array(drawn_rectangles)
         boundingboxes = boundingboxes.astype(int)
         drawn_rectangles = Module.non_max_suppression_fast(boundingboxes, 0.3)
