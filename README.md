@@ -23,7 +23,7 @@ The reason lies in the fact that many humans are careless about this pandemic by
 
 •	![Mary Malak](https://github.com/MaryMalak)  (1601069)
 
-•	![Maryham Melad](https://github.com/maryhammelad) (1061075)
+•	![Maryham Melad](https://github.com/maryhammelad) (1601075)
 
 
 # Demo Video
