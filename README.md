@@ -11,7 +11,7 @@ by determining their position. Therefore, the program calculates pairwise distan
 To decide whether the distance between them is appropriate or not, the algorithm checks the distance matrix for people less than N pixels apart.
 Finally, by testing the frame, if the system predicts that people will violate social distancing, a warning will be occurred by the algorithm,to avoid face to face contact with people. 
 The reason lies in the fact that many humans are careless about this pandemic by not keeping a safe distance.
-project limitations: our project can detect people walking at intermediate distance from the camera.
+So we have designed our project to detect full body of people in video not just their faces to achieve higher level of social distancing safety between people. Moreover, our main focus is to detect people walking through a certain region (part of street/company entrance/mall entrance). That's why we decided to detect people at an intermediate distance from the camera and wait for the ones faraway till they decide to walk through our precise detection area.
 
 
 # Team Members
