@@ -13,7 +13,7 @@ modelpath = "MobileNetSSD_deploy.caffemodel"
 detector = cv2.dnn.readNetFromCaffe(prototxt=protopath, caffeModel=modelpath)
 
 
-# To specify objs to be detected 
+# To specify different objs
 CLASSES = ["background", "aeroplane", "bicycle", "bird", "boat",
            "bottle", "bus", "car", "cat", "chair", "cow", "diningtable",
            "dog", "horse", "motorbike", "person", "pottedplant", "sheep",
@@ -34,7 +34,7 @@ def main(path):
         total_frames = total_frames + 1
 
         (H, W) = frame.shape[:2]
-        # To scale and subtract mean
+        # To scale and subtract mean using cv2
         blob = cv2.dnn.blobFromImage(frame, 0.007843, (W, H), 127.5)
 
         detector.setInput(blob)
